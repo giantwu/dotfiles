@@ -1,9 +1,8 @@
 [hub]
   protocol = https
 [user]
-  name = Amo Wu
-  email = amo260@gmail.com
-  signingkey = E77D0CB6
+  name = giantwu
+  email = giantwjk@gmail.com
 [credential]
   helper = osxkeychain
 [color]
