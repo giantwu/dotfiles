@@ -1,10 +1,9 @@
 cask_args appdir: '/Applications'
 
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
+tap 'homebrew/cask'
+tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
-tap 'homebrew/core'
 tap 'homebrew/services'
 tap 'pokanop/pokanop'
 tap 'rcmdnk/file'
