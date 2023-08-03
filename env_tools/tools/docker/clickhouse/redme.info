@@ -1,0 +1,5 @@
+
+//启动 
+docker-compose up -d
+//进入 clickhouse-client
+docker-compose exec ck-server clickhouse-client

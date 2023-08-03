@@ -1,0 +1,342 @@
+name: manifest
+source: file:///Users/giantwu/.nostromo/ships/manifest.yaml
+path: /Users/giantwu/.nostromo/ships/manifest.yaml
+version:
+  uuid: 4663147d-58a9-4f32-9784-8acecfd08bdd
+  semver: 0.11.4
+  gitcommit: 8f400a9b1780e64edbb1013b19fcfe0a7c77b542
+  builddate: "2022-06-02T00:34:36Z"
+config:
+  verbose: false
+  aliasesonly: false
+  mode: 0
+  backupcount: 10
+commands:
+  1.sourcetree:
+    keypath: open-sourcetree
+    name: goto code && sh clear.sh && open /Applications/Sourcetree.app
+    alias: open-sourcetree
+    aliasonly: true
+    description: this is open app source-tree scripte
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  clickhouse-client:
+    keypath: clickhouse-client
+    name: docker-compose exec ck-server clickhouse-client
+    alias: clickhouse-client
+    aliasonly: true
+    description: this is clickhouse-client cli scripte
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  clickhouse-down:
+    keypath: clickhouse-stop
+    name: cd ~/docker/clickhouse && docker-compose down
+    alias: clickhouse-stop
+    aliasonly: true
+    description: this is clickhouse-server stop scripte
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  clickhouse-server:
+    keypath: clickhouse-start
+    name: cd ~/docker/clickhouse && docker-compose up -d
+    alias: clickhouse-start
+    aliasonly: true
+    description: this is clickhosue-server start scripte
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  consul-down:
+    keypath: consul-stop
+    name: cd ~/docker/consul && docker-compose down
+    alias: consul-stop
+    aliasonly: true
+    description: this is consul stop scripte
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  consul-start:
+    keypath: consul-start
+    name: goto consul&&dcu
+    alias: consul-start
+    aliasonly: true
+    description: this is consul-server start scripte
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  dcd:
+    keypath: dcd
+    name: docker-compose down
+    alias: dcd
+    aliasonly: true
+    description: this is scripte for docker-compose down
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  dcu:
+    keypath: dcu
+    name: docker-compose up -d
+    alias: dcu
+    aliasonly: true
+    description: this is docker-compose up scripte
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  dk.l:
+    keypath: dk.l
+    name: docker ps -a
+    alias: dk.l
+    aliasonly: true
+    description: this is show all container list scripte for docker
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  json-start:
+    keypath: json-start
+    name: cd ~/docker/json && dcu
+    alias: json-start
+    aliasonly: true
+    description: this is scripte for json-crack
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  json-stop:
+    keypath: json-stop
+    name: cd ~/docker/json && dcd
+    alias: json-stop
+    aliasonly: true
+    description: this is a scripte for json-crack
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  kafka-restorage:
+    keypath: kafka-restorage
+    name: 'cd /Users/giantwu/tools/kafka_2.13-3.4.0 && KAFKA_CLUSTER_ID="$(bin/kafka-storage.sh
+      random-uuid)" && bin/kafka-storage.sh format -t $KAFKA_CLUSTER_ID -c config/kraft/server.properties '
+    alias: kafka-restorage
+    aliasonly: true
+    description: ""
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  kafka-start:
+    keypath: kafka-start
+    name: cd /Users/giantwu/tools/kafka_2.13-3.4.0 && bin/kafka-server-start.sh config/kraft/server.properties
+    alias: kafka-start
+    aliasonly: true
+    description: ""
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  kafka-stop:
+    keypath: kafka-stop
+    name: cd /Users/giantwu/tools/kafka_2.13-3.4.0 && bin/kafka-server-stop.sh
+    alias: kafka-stop
+    aliasonly: true
+    description: ""
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  kafka-topic-create:
+    keypath: kafka-topic-create
+    name: 'cd & bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --topic  '
+    alias: kafka-topic-create
+    aliasonly: true
+    description: 'this is command for create kafka topic '
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  kafka-topic-data:
+    keypath: kafka-topic-data
+    name: 'cd & bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning
+      --topic   '
+    alias: kafka-topic-data
+    aliasonly: true
+    description: ""
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  kafka-topic-info:
+    keypath: kafka-topic-info
+    name: 'cd & bin/kafka-topics.sh --bootstrap-server localhost:9092  --describe
+      --topic '
+    alias: kafka-topic-info
+    aliasonly: true
+    description: ""
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  kafka-topic-list:
+    keypath: kafka-topic-list
+    name: cd & bin/kafka-topics.sh --bootstrap-server localhost:9092  --list
+    alias: kafka-topic-list
+    aliasonly: true
+    description: show kafka topic list
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  mysql-client:
+    keypath: mysql-client
+    name: docker-compose exec db mysql -uroot -p
+    alias: mysql-client
+    aliasonly: true
+    description: this is mysql-server cli scripte
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  mysql-start:
+    keypath: mysql-start
+    name: goto docker && cd mysql && dcu
+    alias: mysql-start
+    aliasonly: true
+    description: this is mysql-server start scripte
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  mysql-stop:
+    keypath: mysql-stop
+    name: goto docker&& cd mysql && dcd
+    alias: mysql-stop
+    aliasonly: true
+    description: this is mysql-server stop scripte
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  redis-cli:
+    keypath: redis-cli
+    name: cd ~/docker/redis && docker-compose exec redis-server redis-cli -p 56379
+    alias: redis-cli
+    aliasonly: true
+    description: this is redis-cli scripte
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  redis-server-start:
+    keypath: redis-server-start
+    name: cd ~/docker/redis && docker-compose up -d
+    alias: redis-server-start
+    aliasonly: true
+    description: this is redis-server start scripte
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  redis-server-stop:
+    keypath: redis-server-stop
+    name: cd ~/docker/redis && docker-compose down
+    alias: redis-server-stop
+    aliasonly: true
+    description: this is redis-server stop scripte
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false
+  tree:
+    keypath: tree
+    name: 'find . -print | sed -e ''s;[^/]*/;|;g;s;|; |;g'' '
+    alias: tree
+    aliasonly: false
+    description: ""
+    commands: {}
+    subs: {}
+    code:
+      language: sh
+      snippet: ""
+    mode: 0
+    disabled: false

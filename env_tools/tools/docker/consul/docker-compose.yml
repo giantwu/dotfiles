@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  consul-dev:
+    image: consul
+    container_name: consul-dev
+    expose:
+      - "8000"
+      - "8500"
+    ports:
+      - "8001:8000"
+      - "8500:8500"
