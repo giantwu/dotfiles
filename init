@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+export LC_ALL=zh_CN.UTF-8
+export LANG=zh_CN.UTF-8
+ln -sv ~/.dotfiles/clashx/config.yaml ~/.config/clash/config.yaml
+sudo spctl --master-disable
+
+install_homebrew () {
+  if test ! $(which brew)
+  then
+    echo "  Installing Homebrew for you..."
+
+    # Install the correct homebrew for each OS type
+    if test "$(uname)" = "Darwin"
+    then
+      /bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+    elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
+    then
+      ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+    fi
+
+  fi
+}
+install_homebrew

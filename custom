@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-autosuggestions
+git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+cd ~/.dotfiles/jb/jetbra && cd scripts && ./install.sh
+mkdir ~/.hammerspoon && cp -Rf ~/.dotfiles/hammerspoon/* ~/.hammerspoon/
