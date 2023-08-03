@@ -5,3 +5,24 @@ git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${Z
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 cd ~/.dotfiles/jb/jetbra && cd scripts && ./install.sh
 mkdir ~/.hammerspoon && cp -Rf ~/.dotfiles/hammerspoon/* ~/.hammerspoon/
+chmod 755 /usr/local/Cellar/goto/2.0.0/etc/bash_completion.d/goto.sh
+
+# 常用命令初始化  后续可以定期整理增加
+# nostromo 相关命令恢复
+ln -sv ~/.dotfiles/env_tools/tools/nostromo/ships/manifest.yaml ~/.nostromo/ships/manifest.yaml
+# docker
+ln -sv ~/.dotfiles/env_tools/tools/docker ~/docker
+# gvm
+zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+
+#goto
+goto -r redis ~/docker/redis
+goto -r clickhouse ~/docker/clickhouse
+goto -r mysql ~/docker/mysq
+goto -r code ~/work/code
+goto -r work ~/work
+
+# pecl
+pecl install https://pecl.php.net/get/swoole-4.8.13.tgz
+pecl install igbinary
+

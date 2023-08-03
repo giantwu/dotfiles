@@ -1,1 +1,2 @@
-als gf gf
+alias  gf=gf
+alias  als=nostromo

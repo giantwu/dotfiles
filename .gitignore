@@ -1,6 +1,11 @@
 .DS_Store
 *~
 *.swp
+data
+log
+cargo
+man
+completions
 
 # cache files for sublime text
 *.tmlanguage.cache

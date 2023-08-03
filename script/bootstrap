@@ -110,7 +110,7 @@ install_homebrew () {
     # Install the correct homebrew for each OS type
     if test "$(uname)" = "Darwin"
     then
-      ruby -e "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+      /bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
     elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
     then
       ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
@@ -139,7 +139,7 @@ install_dotfiles () {
   done
 }
 
-install_homebrew
+# install_homebrew
 install_ohmyzsh
 install_dotfiles
 
