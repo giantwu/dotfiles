@@ -15,6 +15,9 @@ ln -sv ~/.dotfiles/env_tools/tools/docker ~/docker
 # gvm
 zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
 
+# iterm2
+ln -sv ~/.dotfiles/env_tools/tools/iterm2 ~/.iterm
+
 #goto
 goto -r redis ~/docker/redis
 goto -r clickhouse ~/docker/clickhouse

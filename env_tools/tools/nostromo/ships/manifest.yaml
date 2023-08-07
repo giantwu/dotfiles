@@ -1,11 +1,11 @@
 name: manifest
-source: file:///Users/giantwu/.nostromo/ships/manifest.yaml
+source: file:/Users/giantwu/.nostromo/ships/manifest.yaml
 path: /Users/giantwu/.nostromo/ships/manifest.yaml
 version:
-  uuid: 4663147d-58a9-4f32-9784-8acecfd08bdd
-  semver: 0.11.4
-  gitcommit: 8f400a9b1780e64edbb1013b19fcfe0a7c77b542
-  builddate: "2022-06-02T00:34:36Z"
+  uuid: a222caae-b29e-4e7d-954b-f3b9c5c1c76b
+  semver: 0.12.0
+  gitcommit: 35c36d620fc35d3a5b879c4cd14437b0ecc3975d
+  builddate: "2023-02-25T09:17:44Z"
 config:
   verbose: false
   aliasesonly: false

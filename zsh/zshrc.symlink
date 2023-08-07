@@ -47,6 +47,10 @@ then
 fi
 export PATH="/usr/local/opt/php@7.4/bin:$PATH"
 export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
-alias als nostromo
 
 [[ -s "/Users/giantwu/.gvm/scripts/gvm" ]] && source "/Users/giantwu/.gvm/scripts/gvm"
+
+# nostromo [section begin]
+autoload -U compinit; compinit
+source <(nostromo completion zsh)
+# nostromo [section end]

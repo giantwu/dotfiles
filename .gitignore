@@ -1,12 +1,11 @@
 .DS_Store
 *~
 *.swp
-data
+env_tools/tools/docker/clickhouse/data/store/*
+mysql/data/*
 log
-cargo
-man
-completions
-
+clickhouse-server.err.log
+clickhouse-server.log
 # cache files for sublime text
 *.tmlanguage.cache
 *.tmPreferences.cache
